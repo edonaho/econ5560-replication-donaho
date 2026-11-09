@@ -1,5 +1,5 @@
 **Overview**\
-The code in this replication package constructs the figure and tables for "Public preferences for ecological indicators used in Everglades restoration" by Stainbeck et al. using R. One main file (run_all.R) run all of the code to generate the data for the 1 figure and 3 necessary tables in the paper. The replicator should expect the code to run for about 20 minutes.
+The code in this replication package constructs the figure and tables for "Public preferences for ecological indicators used in Everglades restoration" by Stainback et al. using R. One main file (run_all.R) run all of the code to generate the data for the 1 figure and 3 necessary tables in the paper. The replicator should expect the code to run for about 10 minutes.
 
 Stainback GA, Lai JH, Pienaar EF, Adam DC, Wiederholt R, et al. (2020) Public preferences for ecological indicators used in Everglades restoration. PLOS ONE 15(6): e0234051. https://doi.org/10.1371/journal.pone.0234051
 
@@ -35,13 +35,13 @@ To run the replication, run "run_all.R". Outputs are saved to the output/ folder
   run_all.R             : installs necessary packages, runs all analysis and exports figure/tables to output/\
   LCM_4classes_data.dta : survey data (OSF, downloaded 8/5/26)\
 
-What software and packages are required, with versions. Copy these from your sessionInfo output.
-
 **Memory, Runtime, Storage Requirements**\
 Runtime is appoximately 10 minutes.\
 This replication package requires around 5 MB of storage on the installed device
 
 Not included in this replication package is the code for the latent class model. We also recognize that the code for the Mixed Logit Regression in WTP space is not accurate to the paper, but we have included it to be honest to the replication attempt.
+The WTP-space mixed logit (end of run_all.R) does not converge. logitr returns Exit Status -1 (generic failure), all standard errors are NaN, and the coefficients are implausible (e.g., optout = 6,522, cost scale = -11.8). The log-likelihood is -12,775.6, and the reported null log-likelihood of -592,075 is also clearly wrong. These results should not be used. This model is not part of the five requested outputs.
+
 
 **AI Usage Disclosure**\
   AI was used sparingly to write and debug code, and format output
