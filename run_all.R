@@ -499,7 +499,7 @@ logLik(wtp_fit_check)
 
 message("Total runtime: ", round(difftime(Sys.time(), start_time, units = "mins"), 1), " minutes")
 
-
+print(sessionInfo())
 
 
 
